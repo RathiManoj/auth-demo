@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Auth-Demo Application</h1>
+    <p class="lead">A simple authentication application built with Node Js</p>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div
+          class="nav flex-column nav-pills"
+          id="tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <a
+            class="nav-link active"
+            id="overview-tab"
+            data-toggle="pill"
+            href="#overview"
+            role="tab"
+            aria-controls="overview"
+            aria-selected="true"
+            >Overview</a
+          >
+          <a
+            class="nav-link"
+            id="features-tab"
+            data-toggle="pill"
+            href="#features"
+            role="tab"
+            aria-controls="features"
+            aria-selected="false"
+            >Features</a
+          >
+          <a
+            class="nav-link"
+            id="tech-tab"
+            data-toggle="pill"
+            href="#tech"
+            role="tab"
+            aria-controls="tech"
+            aria-selected="false"
+            >Tech Used</a
+          >
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="tab-content mt-2 mt-sm-0" id="tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="overview"
+            role="tabpanel"
+            aria-labelledby="overview-tab"
+          >
+            <div>
+              <h2>Overview</h2>
+              <ul>
+                <li>
+                  This is a simple application that manage user authentication
+                  using session technique.
+                </li>
+                <li>Password stored in encrypted form.</li>
+                <li>Only authorised users can access internal pages.</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="features"
+            role="tabpanel"
+            aria-labelledby="feature-tab"
+          >
+            <div>
+              <h2>Features</h2>
+              <ul>
+                <li>User Registration + Login facilites</li>
+                <li>User can change Password</li>
+                <li>Default Server side sesion store authentication</li>
+                <li>sha256 encrypted Password storage</li>
+                <li>32 bytes salt key length</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tech"
+            role="tabpanel"
+            aria-labelledby="tech-tab"
+          >
+            <div>
+              <h2>Tech Used</h2>
+              <ul>
+                <li>Mongo DB Atlas</li>
+                <li>Bootstap v4.5</li>
+                <li>Font Awesome v5.15</li>
+                <li>Node Js v14.15</li>
+                <li>Express Js v4.17</li>
+                <li>Passport Js v0.4</li>
+                <li>EJS View v3.1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

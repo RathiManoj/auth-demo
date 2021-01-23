@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <h1>Hello, <%= user.name.split(" ",1) %></h1>
+  <div>
+    <div class="p-3 w-50 mx-auto">
+      <table class="table">
+        <tr>
+          <th scope="row">Name</th>
+          <td><%= user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td><%= user.email %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
