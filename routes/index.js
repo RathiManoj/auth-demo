@@ -39,13 +39,13 @@ router.post("/register", ifNotLoggedIn, (req, res) => {
   User.register(user, req.body.password, (err, user) => {
     if (err) {
       req.flash("error", err.message);
-      console.log(err);
       res.redirect("/register");
+    } else {
+      passport.authenticate("local")(req, res, () => {
+        req.flash("success", "Welcome, " + user.name);
+        res.redirect("/");
+      });
     }
-    passport.authenticate("local")(req, res, () => {
-      req.flash("success", "Welcome, " + user.name);
-      res.redirect("/");
-    });
   });
 });
 

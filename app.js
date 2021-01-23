@@ -27,6 +27,7 @@ const DB = "auth-demo",
     "?retryWrites=true&w=majority";
 
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.set("bufferCommands", false);
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
